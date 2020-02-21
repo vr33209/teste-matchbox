@@ -29,6 +29,12 @@ yarn install ou npm install
 # Para iniciar o desenvolvimento
 yarn dev ou npm run dev
 ````
+## Adicione um arquivo na raiz do projeto .env
+com as seguintes variaveis:
+
+* USER_BANK=joao
+* PASSWORD_BANK=joao123456
+* SECRET_TOKEN=testMacthBox2200
 
 # Rotas
 *-* Tudo em **negrito** são parametros obrigatorios.
