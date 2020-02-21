@@ -12,10 +12,10 @@ routes.post('/session', SessionController.create);
 routes.use(auth)
 routes.put('/user/:_id', UserController.update);
 routes.post('/candidate', CandidateController.create);
-routes.get('/candidates', CandidateController.candidates);
 routes.delete('/candidate/:_id', CandidateController.remove);
 routes.put('/candidate/:_id', CandidateController.update);
 routes.use(acess)
+routes.get('/candidates', CandidateController.candidates);
 routes.get('/users', UserController.users);
 routes.delete('/user/:_id', UserController.remove);
 routes.post('/job', RegisterJobsController.create);

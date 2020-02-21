@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import yup from 'yup';
+import * as yup from 'yup';
 import User from '../models/User';
 
 export default {
