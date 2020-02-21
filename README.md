@@ -84,7 +84,8 @@ graduation_institution_name, year_of_formation, resources.
 * **Nodemon**.
 * **Bcrypt**.
 * **jsonwebtoken**.
-
+* **sucrase**.
+  
 # Desenvolvido por Joao Victor.
 
 

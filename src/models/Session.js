@@ -1,18 +1,17 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
-const SessionSchema = new mongoose.Schema({
+export const SessionSchema = new mongoose.Schema({
   email: {
     type: String,
-    required: true
+    required: true,
   },
   password: {
     type: String,
-    required: true
+    required: false,
   },
   jwt: {
     type: String,
-    required: true
+    required: true,
   },
-})
-
-module.exports = mongoose.model('Session', SessionSchema)
+});
+export default mongoose.model('Session', SessionSchema);

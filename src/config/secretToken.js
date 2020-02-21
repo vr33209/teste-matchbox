@@ -1,3 +1,2 @@
-module.exports = {
-  SECRET_TOKEN: 'testMacthBox2200'
-}
+require('dotenv').config()
+export const SECRET_TOKEN = process.env.SECRET_TOKEN

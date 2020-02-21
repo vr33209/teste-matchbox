@@ -1,10 +1,11 @@
-const express = require('express');
-const routes = require('./routes');
-const mongoose = require('mongoose');
-
+import express from 'express';
+import routes from './routes';
+import mongoose from 'mongoose';
 const app = express();
+require('dotenv').config()
+const { PASSWORD_BANK, USER_BANK } = process.env;
 
-mongoose.connect('mongodb+srv://joao:joao123456@cluster0-qmbxi.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect(`mongodb+srv://${USER_BANK}:${PASSWORD_BANK}@cluster0-qmbxi.mongodb.net/test?retryWrites=true&w=majority`,{
   useNewUrlParser:true,
   useUnifiedTopology:true
 })

@@ -1,26 +1,26 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
-const RegisterJobsSchema = new mongoose.Schema({
+export const RegisterJobsSchema = new mongoose.Schema({
   name_jobs: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   date_limite: {
     type: Date,
-    required: true
+    required: true,
   },
   number_jobs: {
     type: Number,
-    required: true
+    required: true,
   },
-  candidate_id:[{
-    type: mongoose.Schema.Types.ObjectId, ref: "Candidate",
-    required: true
+  candidate_id: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Candidate',
+    required: true,
   }],
-})
-
-module.exports = mongoose.model('RegisterJobs', RegisterJobsSchema)
+});
+export default mongoose.model('RegisterJobs', RegisterJobsSchema);

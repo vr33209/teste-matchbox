@@ -1,10 +1,10 @@
-const { Router } = require('express');
-const CandidateController = require('./controllers/CandidateController')
-const RegisterJobsController = require('./controllers/RegisterJobs')
-const UserController = require('./controllers/UserController')
-const SessionController = require('./controllers/SessionController')
-const auth = require('./middlewares/auth')
-const acess = require('./middlewares/acess')
+import { Router } from 'express';
+import CandidateController from './controllers/CandidateController'
+import RegisterJobsController from './controllers/RegisterJobs'
+import UserController from './controllers/UserController'
+import SessionController from './controllers/SessionController'
+import auth from './middlewares/auth'
+import acess from './middlewares/acess'
 
 const routes = Router();
 routes.post('/user', UserController.create);
@@ -24,4 +24,4 @@ routes.delete('/job/:_id', RegisterJobsController.remove);
 routes.put('/job/:_id', RegisterJobsController.update);
 routes.post('/jobAssign', RegisterJobsController.toAssignCandidate);
 
-module.exports = routes;  
+export default  routes;  
