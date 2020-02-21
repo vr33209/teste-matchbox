@@ -3,6 +3,7 @@ const Session = require('../models/Session')
 const jwt = require( 'jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { SECRET_TOKEN }  =  require('../config/secretToken');
+const yup = require('yup');
 
 module.exports = {
   async create(req,res){
@@ -20,7 +21,7 @@ module.exports = {
     let validPassword = await bcrypt.compare(password, hasUser.password);
     if(!validPassword) return res.status(401).send({ error:"Senha invalida!"});
     let session = new Session({email,password});
-    session.jwt = jwt.sign({ token: session._id }, SECRET_TOKEN)
+    session.jwt = jwt.sign({ token: session._id, type:hasUser.type }, SECRET_TOKEN)
     session.save()
     return res.status(200).send(session)
   },
