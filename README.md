@@ -51,7 +51,7 @@ yarn dev ou npm run dev
 
 # Candidate - BACKEND
 * Metodo POST (/candidate) - Cria o candidatos.
-*-* Parametros: **Nome**, **email**, ***assword**, **birthdate**, cpf,graduation_course_name
+*-* Parametros: **Nome**, **email**, **password**, **birthdate**, cpf,graduation_course_name
 graduation_institution_name, year_of_formation, resources.
 
 * Metodo GET (/candidates) - Lista todos os candidatos.
