@@ -30,10 +30,10 @@ yarn install ou npm install
 yarn dev ou npm run dev
 ````
 
-## Rotas
+# Rotas
 *-* Tudo em **negrito** são parametros obrigatorios.
 
-# User - BACKEND
+## User
 * Metodo POST (/user) - Cria o usuario para logar e conseguir criar vagas e candidatos.
 *-* Parametros: Nome, email, password, birthdate, type(Necessario***, **admin** ou **candidate**).
 
@@ -49,7 +49,7 @@ yarn dev ou npm run dev
 * Metodo UPDATE (/user/:_id) - Atualiza um usuario.
 *-* Parametros: ***id***.
 
-# Candidate - BACKEND
+## Candidate
 * Metodo POST (/candidate) - Cria o candidatos.
 *-* Parametros: **Nome**, **email**, **password**, **birthdate**, cpf,graduation_course_name
 graduation_institution_name, year_of_formation, resources.
@@ -64,7 +64,7 @@ graduation_institution_name, year_of_formation, resources.
 ***-*** Parametros: **id**.
 
  
-# Jobs - BACKEND
+## Jobs
 * Metodo POST (/job) - Cria uma vaga.
 *-* Parametros: **name_jobs**, **description**, **date_limite**, **number_jobs**, **candidate_id**.
 
@@ -85,6 +85,6 @@ graduation_institution_name, year_of_formation, resources.
 * **Bcrypt**.
 * **jsonwebtoken**.
 
-*-* Desenvolvido por **Joao Victor**.
+# Desenvolvido por Joao Victor.
 
 
